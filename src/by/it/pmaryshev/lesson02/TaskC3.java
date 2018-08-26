@@ -1,5 +1,7 @@
 package by.it.pmaryshev.lesson02;
 
+import java.text.DecimalFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 /*
@@ -37,16 +39,23 @@ class TaskC3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your weight: ");
         int inputM = sc.nextInt();
-        System.out.print(getWeight(inputM));
+        System.out.println(getWeight(inputM));
 
     }
-   private static double getWeight(int weight) {
+
+    static double getWeight(int weight) {
 
         double gEarth = 9.81;
         double gMars = 3.86;
-        double mMars;
+        double mMars = weight/gEarth*gMars;
+        int p100 = (int) (mMars*100);
 
-        mMars = (weight*gMars)/gEarth;
-        return mMars;
+        double delta = mMars*100 - ((int)(mMars*100));
+       if (delta <0.5)
+           return p100/100.0;
+           else
+               return (p100+1)/100.0;
+
+
     }
 }
