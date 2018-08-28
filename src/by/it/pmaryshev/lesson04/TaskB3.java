@@ -25,7 +25,20 @@ package by.it.pmaryshev.lesson04;
  */
 
 
+import java.util.Scanner;
 
 public class TaskB3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int  num= sc.nextInt();
+        int res = 0;
+        for (int i = 1; i < num ; i++) {
+            res=res+i;
+            if(res<=num)
+            System.out.print(res+",");
+        }
+
+    }
 
 }
