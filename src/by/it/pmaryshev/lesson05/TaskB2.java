@@ -19,7 +19,27 @@ a=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 b=[11, 22, 33, 44, 55, 66, 77, 88, 99, 0]
 
 */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class TaskB2 {
+    public static void main(String[] args) {
 
+        int[] m = new int[20];
+        int[] a = new int[10];
+        int[] b = new int[10];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter variables");
+        for (int i = 0; i <= 19; i++) {
+            m[i] = sc.nextInt();
+        }
+        System.arraycopy(m, 0, a, 0, 10);
+        System.arraycopy(m, 10, b, 0, 10);
+
+        System.out.println("a=" + Arrays.toString(a));
+        System.out.println("b=" + Arrays.toString(b));
+
+    }
 }

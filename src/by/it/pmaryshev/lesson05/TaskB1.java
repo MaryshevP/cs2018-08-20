@@ -10,6 +10,18 @@ package by.it.pmaryshev.lesson05;
 */
 
 
-public class TaskB1 {
+import java.util.ArrayList;
+import java.util.Collections;
 
+
+public class TaskB1 {
+    public static void main(String[] args) {
+        ArrayList<String> array = new ArrayList<>();
+        Collections.addAll(array, "один", "два", "три", "четыре", "пять");
+        System.out.println(array.size());
+        for (String s : array) {
+            System.out.println(s);
+        }
+
+    }
 }
